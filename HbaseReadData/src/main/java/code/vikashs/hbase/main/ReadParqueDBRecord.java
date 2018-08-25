@@ -59,6 +59,7 @@ public class ReadParqueDBRecord {
 			
 			FilterList filters =new FilterList(filterlist);
 			Scan scan = new Scan();
+			scan.setTimeRange(1535129800000L, 1535129867000L);
 			scan.setFilter(filters);
 			scanResult = table.getScanner(scan);
 			printResult(scanResult);
